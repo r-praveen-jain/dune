@@ -28,7 +28,7 @@
 //***************************************************************************
 // Automatically generated.                                                 *
 //***************************************************************************
-// IMC XML MD5: d292e724592557940354dddbfc5a9d32                            *
+// IMC XML MD5: fab943b113b6390fce8e790d1f0e9dea                            *
 //***************************************************************************
 
 #ifndef DUNE_IMC_MACROS_HPP_INCLUDED_
@@ -612,5 +612,17 @@
 #define DUNE_IMC_APMSTATUS 906
 //! SadcReadings identification number.
 #define DUNE_IMC_SADCREADINGS 907
+//! PathFollowState identification number.
+#define DUNE_IMC_PATHFOLLOWSTATE 1000
+//! FormationControlState identification number.
+#define DUNE_IMC_FORMATIONCONTROLSTATE 1001
+//! STCInitiate identification number.
+#define DUNE_IMC_STCINITIATE 1002
+//! STCoordinationState identification number.
+#define DUNE_IMC_STCOORDINATIONSTATE 1003
+//! reqSTCoordinationState identification number.
+#define DUNE_IMC_REQSTCOORDINATIONSTATE 1004
+//! STAverageState identification number.
+#define DUNE_IMC_STAVERAGESTATE 1005
 
 #endif

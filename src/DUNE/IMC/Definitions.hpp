@@ -28,7 +28,7 @@
 //***************************************************************************
 // Automatically generated.                                                 *
 //***************************************************************************
-// IMC XML MD5: d292e724592557940354dddbfc5a9d32                            *
+// IMC XML MD5: fab943b113b6390fce8e790d1f0e9dea                            *
 //***************************************************************************
 
 #ifndef DUNE_IMC_DEFINITIONS_HPP_INCLUDED_
@@ -23131,6 +23131,438 @@ namespace DUNE
       getFixedSerializationSize(void) const
       {
         return 6;
+      }
+
+      fp64_t
+      getValueFP(void) const;
+
+      void
+      setValueFP(fp64_t val);
+
+      void
+      fieldsToJSON(std::ostream& os__, unsigned nindent__) const;
+    };
+
+    //! Path Following State.
+    class PathFollowState: public Message
+    {
+    public:
+      //! Gamma.
+      fp32_t gamma;
+      //! Rate of change of Gamma.
+      fp32_t gamma_dot;
+      //! Desired x.
+      fp32_t x;
+      //! Desired y.
+      fp32_t y;
+      //! Desired z.
+      fp32_t z;
+      //! Desired vx.
+      fp32_t vx;
+      //! Desired vy.
+      fp32_t vy;
+      //! Desired vz.
+      fp32_t vz;
+      //! Error x.
+      fp32_t err_x;
+      //! Error y.
+      fp32_t err_y;
+      //! Error z.
+      fp32_t err_z;
+      //! Start x.
+      fp32_t start_x;
+      //! Start y.
+      fp32_t start_y;
+      //! Start z.
+      fp32_t start_z;
+      //! End x.
+      fp32_t end_x;
+      //! End y.
+      fp32_t end_y;
+      //! End z.
+      fp32_t end_z;
+      //! Track Bearing.
+      fp32_t track_bearing;
+
+      static uint16_t
+      getIdStatic(void)
+      {
+        return 1000;
+      }
+
+      PathFollowState(void);
+
+      Message*
+      clone(void) const
+      {
+        return new PathFollowState(*this);
+      }
+
+      void
+      clear(void);
+
+      bool
+      fieldsEqual(const Message& msg__) const;
+
+      int
+      validate(void) const;
+
+      uint8_t*
+      serializeFields(uint8_t* bfr__) const;
+
+      uint16_t
+      deserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      getId(void) const
+      {
+        return PathFollowState::getIdStatic();
+      }
+
+      const char*
+      getName(void) const
+      {
+        return "PathFollowState";
+      }
+
+      unsigned
+      getFixedSerializationSize(void) const
+      {
+        return 72;
+      }
+
+      void
+      fieldsToJSON(std::ostream& os__, unsigned nindent__) const;
+    };
+
+    //! Formation Control State.
+    class FormationControlState: public Message
+    {
+    public:
+      //! Agent ID.
+      uint32_t agent_id;
+      //! X - position.
+      fp32_t x;
+      //! Y - position.
+      fp32_t y;
+      //! Z - position.
+      fp32_t z;
+      //! Path Variable.
+      fp32_t gamma;
+
+      static uint16_t
+      getIdStatic(void)
+      {
+        return 1001;
+      }
+
+      FormationControlState(void);
+
+      Message*
+      clone(void) const
+      {
+        return new FormationControlState(*this);
+      }
+
+      void
+      clear(void);
+
+      bool
+      fieldsEqual(const Message& msg__) const;
+
+      int
+      validate(void) const;
+
+      uint8_t*
+      serializeFields(uint8_t* bfr__) const;
+
+      uint16_t
+      deserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      getId(void) const
+      {
+        return FormationControlState::getIdStatic();
+      }
+
+      const char*
+      getName(void) const
+      {
+        return "FormationControlState";
+      }
+
+      unsigned
+      getFixedSerializationSize(void) const
+      {
+        return 20;
+      }
+
+      void
+      fieldsToJSON(std::ostream& os__, unsigned nindent__) const;
+    };
+
+    //! Initialize SelfTrigConsensus.
+    class STCInitiate: public Message
+    {
+    public:
+      //! value.
+      uint8_t value;
+
+      static uint16_t
+      getIdStatic(void)
+      {
+        return 1002;
+      }
+
+      STCInitiate(void);
+
+      Message*
+      clone(void) const
+      {
+        return new STCInitiate(*this);
+      }
+
+      void
+      clear(void);
+
+      bool
+      fieldsEqual(const Message& msg__) const;
+
+      int
+      validate(void) const;
+
+      uint8_t*
+      serializeFields(uint8_t* bfr__) const;
+
+      uint16_t
+      deserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      getId(void) const
+      {
+        return STCInitiate::getIdStatic();
+      }
+
+      const char*
+      getName(void) const
+      {
+        return "STCInitiate";
+      }
+
+      unsigned
+      getFixedSerializationSize(void) const
+      {
+        return 1;
+      }
+
+      fp64_t
+      getValueFP(void) const;
+
+      void
+      setValueFP(fp64_t val);
+
+      void
+      fieldsToJSON(std::ostream& os__, unsigned nindent__) const;
+    };
+
+    //! Send coordination state.
+    class STCoordinationState: public Message
+    {
+    public:
+      //! value.
+      fp32_t value;
+
+      static uint16_t
+      getIdStatic(void)
+      {
+        return 1003;
+      }
+
+      STCoordinationState(void);
+
+      Message*
+      clone(void) const
+      {
+        return new STCoordinationState(*this);
+      }
+
+      void
+      clear(void);
+
+      bool
+      fieldsEqual(const Message& msg__) const;
+
+      int
+      validate(void) const;
+
+      uint8_t*
+      serializeFields(uint8_t* bfr__) const;
+
+      uint16_t
+      deserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      getId(void) const
+      {
+        return STCoordinationState::getIdStatic();
+      }
+
+      const char*
+      getName(void) const
+      {
+        return "STCoordinationState";
+      }
+
+      unsigned
+      getFixedSerializationSize(void) const
+      {
+        return 4;
+      }
+
+      fp64_t
+      getValueFP(void) const;
+
+      void
+      setValueFP(fp64_t val);
+
+      void
+      fieldsToJSON(std::ostream& os__, unsigned nindent__) const;
+    };
+
+    //! Request coordination state.
+    class reqSTCoordinationState: public Message
+    {
+    public:
+      //! value.
+      uint8_t value;
+
+      static uint16_t
+      getIdStatic(void)
+      {
+        return 1004;
+      }
+
+      reqSTCoordinationState(void);
+
+      Message*
+      clone(void) const
+      {
+        return new reqSTCoordinationState(*this);
+      }
+
+      void
+      clear(void);
+
+      bool
+      fieldsEqual(const Message& msg__) const;
+
+      int
+      validate(void) const;
+
+      uint8_t*
+      serializeFields(uint8_t* bfr__) const;
+
+      uint16_t
+      deserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      getId(void) const
+      {
+        return reqSTCoordinationState::getIdStatic();
+      }
+
+      const char*
+      getName(void) const
+      {
+        return "reqSTCoordinationState";
+      }
+
+      unsigned
+      getFixedSerializationSize(void) const
+      {
+        return 1;
+      }
+
+      fp64_t
+      getValueFP(void) const;
+
+      void
+      setValueFP(fp64_t val);
+
+      void
+      fieldsToJSON(std::ostream& os__, unsigned nindent__) const;
+    };
+
+    //! Send computed average state.
+    class STAverageState: public Message
+    {
+    public:
+      //! value.
+      fp32_t value;
+
+      static uint16_t
+      getIdStatic(void)
+      {
+        return 1005;
+      }
+
+      STAverageState(void);
+
+      Message*
+      clone(void) const
+      {
+        return new STAverageState(*this);
+      }
+
+      void
+      clear(void);
+
+      bool
+      fieldsEqual(const Message& msg__) const;
+
+      int
+      validate(void) const;
+
+      uint8_t*
+      serializeFields(uint8_t* bfr__) const;
+
+      uint16_t
+      deserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      getId(void) const
+      {
+        return STAverageState::getIdStatic();
+      }
+
+      const char*
+      getName(void) const
+      {
+        return "STAverageState";
+      }
+
+      unsigned
+      getFixedSerializationSize(void) const
+      {
+        return 4;
       }
 
       fp64_t
