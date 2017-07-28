@@ -211,8 +211,8 @@ namespace
 
 
 	    // Step 4: Dispatch control commands
-	    m_speed_cmd.value = bound(control_cmd.element(0,0), 0.0, 4.0);
-	    m_heading_rate_cmd.value = bound(control_cmd.element(1,0), -1.0, 1.0);
+	    m_speed_cmd.value = bound(control_cmd.element(0,0), -1.0, 2.0);
+	    m_heading_rate_cmd.value = bound(control_cmd.element(1,0), -0.5, 0.5);
 
 	    enableControlLoops(IMC::CL_SPEED);
 	    enableControlLoops(IMC::CL_YAW_RATE);
