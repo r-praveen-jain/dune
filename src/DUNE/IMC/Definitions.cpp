@@ -28,7 +28,7 @@
 //***************************************************************************
 // Automatically generated.                                                 *
 //***************************************************************************
-// IMC XML MD5: fab943b113b6390fce8e790d1f0e9dea                            *
+// IMC XML MD5: effd4cbd28affc98a1c85210d7edaa2b                            *
 //***************************************************************************
 
 // ISO C++ 98 headers.
@@ -25115,6 +25115,142 @@ namespace DUNE
 
     void
     STAverageState::fieldsToJSON(std::ostream& os__, unsigned nindent__) const
+    {
+      IMC::toJSON(os__, "value", value, nindent__);
+    }
+
+    EBCInitiate::EBCInitiate(void)
+    {
+      m_header.mgid = 1006;
+      clear();
+    }
+
+    void
+    EBCInitiate::clear(void)
+    {
+      value = 0;
+    }
+
+    bool
+    EBCInitiate::fieldsEqual(const Message& msg__) const
+    {
+      const IMC::EBCInitiate& other__ = static_cast<const EBCInitiate&>(msg__);
+      if (value != other__.value) return false;
+      return true;
+    }
+
+    int
+    EBCInitiate::validate(void) const
+    {
+      return true;
+    }
+
+    uint8_t*
+    EBCInitiate::serializeFields(uint8_t* bfr__) const
+    {
+      uint8_t* ptr__ = bfr__;
+      ptr__ += IMC::serialize(value, ptr__);
+      return ptr__;
+    }
+
+    uint16_t
+    EBCInitiate::deserializeFields(const uint8_t* bfr__, uint16_t size__)
+    {
+      const uint8_t* start__ = bfr__;
+      bfr__ += IMC::deserialize(value, bfr__, size__);
+      return bfr__ - start__;
+    }
+
+    uint16_t
+    EBCInitiate::reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__)
+    {
+      const uint8_t* start__ = bfr__;
+      bfr__ += IMC::deserialize(value, bfr__, size__);
+      return bfr__ - start__;
+    }
+
+    fp64_t
+    EBCInitiate::getValueFP(void) const
+    {
+      return static_cast<fp64_t>(value);
+    }
+
+    void
+    EBCInitiate::setValueFP(fp64_t val)
+    {
+      value = static_cast<uint8_t>(val);
+    }
+
+    void
+    EBCInitiate::fieldsToJSON(std::ostream& os__, unsigned nindent__) const
+    {
+      IMC::toJSON(os__, "value", value, nindent__);
+    }
+
+    EBCState::EBCState(void)
+    {
+      m_header.mgid = 1007;
+      clear();
+    }
+
+    void
+    EBCState::clear(void)
+    {
+      value = 0;
+    }
+
+    bool
+    EBCState::fieldsEqual(const Message& msg__) const
+    {
+      const IMC::EBCState& other__ = static_cast<const EBCState&>(msg__);
+      if (value != other__.value) return false;
+      return true;
+    }
+
+    int
+    EBCState::validate(void) const
+    {
+      return true;
+    }
+
+    uint8_t*
+    EBCState::serializeFields(uint8_t* bfr__) const
+    {
+      uint8_t* ptr__ = bfr__;
+      ptr__ += IMC::serialize(value, ptr__);
+      return ptr__;
+    }
+
+    uint16_t
+    EBCState::deserializeFields(const uint8_t* bfr__, uint16_t size__)
+    {
+      const uint8_t* start__ = bfr__;
+      bfr__ += IMC::deserialize(value, bfr__, size__);
+      return bfr__ - start__;
+    }
+
+    uint16_t
+    EBCState::reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__)
+    {
+      const uint8_t* start__ = bfr__;
+      bfr__ += IMC::reverseDeserialize(value, bfr__, size__);
+      return bfr__ - start__;
+    }
+
+    fp64_t
+    EBCState::getValueFP(void) const
+    {
+      return static_cast<fp64_t>(value);
+    }
+
+    void
+    EBCState::setValueFP(fp64_t val)
+    {
+      value = static_cast<fp32_t>(val);
+    }
+
+    void
+    EBCState::fieldsToJSON(std::ostream& os__, unsigned nindent__) const
     {
       IMC::toJSON(os__, "value", value, nindent__);
     }

@@ -28,7 +28,7 @@
 //***************************************************************************
 // Automatically generated.                                                 *
 //***************************************************************************
-// IMC XML MD5: fab943b113b6390fce8e790d1f0e9dea                            *
+// IMC XML MD5: effd4cbd28affc98a1c85210d7edaa2b                            *
 //***************************************************************************
 
 #ifndef DUNE_IMC_DEFINITIONS_HPP_INCLUDED_
@@ -23557,6 +23557,140 @@ namespace DUNE
       getName(void) const
       {
         return "STAverageState";
+      }
+
+      unsigned
+      getFixedSerializationSize(void) const
+      {
+        return 4;
+      }
+
+      fp64_t
+      getValueFP(void) const;
+
+      void
+      setValueFP(fp64_t val);
+
+      void
+      fieldsToJSON(std::ostream& os__, unsigned nindent__) const;
+    };
+
+    //! Initialize EventBasedConsensus.
+    class EBCInitiate: public Message
+    {
+    public:
+      //! value.
+      uint8_t value;
+
+      static uint16_t
+      getIdStatic(void)
+      {
+        return 1006;
+      }
+
+      EBCInitiate(void);
+
+      Message*
+      clone(void) const
+      {
+        return new EBCInitiate(*this);
+      }
+
+      void
+      clear(void);
+
+      bool
+      fieldsEqual(const Message& msg__) const;
+
+      int
+      validate(void) const;
+
+      uint8_t*
+      serializeFields(uint8_t* bfr__) const;
+
+      uint16_t
+      deserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      getId(void) const
+      {
+        return EBCInitiate::getIdStatic();
+      }
+
+      const char*
+      getName(void) const
+      {
+        return "EBCInitiate";
+      }
+
+      unsigned
+      getFixedSerializationSize(void) const
+      {
+        return 1;
+      }
+
+      fp64_t
+      getValueFP(void) const;
+
+      void
+      setValueFP(fp64_t val);
+
+      void
+      fieldsToJSON(std::ostream& os__, unsigned nindent__) const;
+    };
+
+    //! Broadcast state.
+    class EBCState: public Message
+    {
+    public:
+      //! value.
+      fp32_t value;
+
+      static uint16_t
+      getIdStatic(void)
+      {
+        return 1007;
+      }
+
+      EBCState(void);
+
+      Message*
+      clone(void) const
+      {
+        return new EBCState(*this);
+      }
+
+      void
+      clear(void);
+
+      bool
+      fieldsEqual(const Message& msg__) const;
+
+      int
+      validate(void) const;
+
+      uint8_t*
+      serializeFields(uint8_t* bfr__) const;
+
+      uint16_t
+      deserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      getId(void) const
+      {
+        return EBCState::getIdStatic();
+      }
+
+      const char*
+      getName(void) const
+      {
+        return "EBCState";
       }
 
       unsigned

@@ -28,7 +28,7 @@
 //***************************************************************************
 // Automatically generated.                                                 *
 //***************************************************************************
-// IMC XML MD5: fab943b113b6390fce8e790d1f0e9dea                            *
+// IMC XML MD5: effd4cbd28affc98a1c85210d7edaa2b                            *
 //***************************************************************************
 
 MESSAGE(1, EntityState)
@@ -326,4 +326,6 @@ MESSAGE(1002, STCInitiate)
 MESSAGE(1003, STCoordinationState)
 MESSAGE(1004, reqSTCoordinationState)
 MESSAGE(1005, STAverageState)
+MESSAGE(1006, EBCInitiate)
+MESSAGE(1007, EBCState)
 #undef MESSAGE

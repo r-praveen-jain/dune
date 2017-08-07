@@ -28,7 +28,7 @@
 //***************************************************************************
 // Automatically generated.                                                 *
 //***************************************************************************
-// IMC XML MD5: fab943b113b6390fce8e790d1f0e9dea                            *
+// IMC XML MD5: effd4cbd28affc98a1c85210d7edaa2b                            *
 //***************************************************************************
 
 #ifndef DUNE_IMC_MACROS_HPP_INCLUDED_
@@ -624,5 +624,9 @@
 #define DUNE_IMC_REQSTCOORDINATIONSTATE 1004
 //! STAverageState identification number.
 #define DUNE_IMC_STAVERAGESTATE 1005
+//! EBCInitiate identification number.
+#define DUNE_IMC_EBCINITIATE 1006
+//! EBCState identification number.
+#define DUNE_IMC_EBCSTATE 1007
 
 #endif
